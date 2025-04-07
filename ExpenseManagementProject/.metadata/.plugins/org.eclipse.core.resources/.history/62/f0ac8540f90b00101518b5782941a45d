@@ -1,9 +1,0 @@
-package mypackage;
-
-public class welecome {
-
-	public static void main(String[] args) {
-		System.out.println("Hello welcome to github demo");
-		System.out.println(" Hi Hello welcome to github demo");}
-
-}

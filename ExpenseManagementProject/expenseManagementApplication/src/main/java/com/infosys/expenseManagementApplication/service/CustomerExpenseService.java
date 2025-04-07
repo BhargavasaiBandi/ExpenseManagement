@@ -1,6 +1,4 @@
 package com.infosys.expenseManagementApplication.service;
-
-
 import java.util.ArrayList;
 
 import java.util.HashMap;
@@ -14,23 +12,24 @@ import com.infosys.expenseManagementApplication.bean.CustomerExpense;
 import com.infosys.expenseManagementApplication.bean.Expense;
 import com.infosys.expenseManagementApplication.dao.ExpenseDao;
 
-
-	@Service
-	public class CustomerExpenseService {
-		@Autowired
-		private ExpenseDao expenseDao;
-		public List<CustomerExpense> getCategoryCustomerExpense(String customerId){
+@Service
+public class CustomerExpenseService {
+	@Autowired
+	private ExpenseDao expenseDao;
+	
+	public List<CustomerExpense> getCategorywiseCustomerExpense(String customerId){
 		List<Expense> expenseList=expenseDao.getExpensesByCustomer(customerId);
 		HashMap<Long,Double> expenseMap=new HashMap<>();
 		for(Expense expense:expenseList) {
 			Long id=expense.getCategoryId();
 			Double amount=expense.getAmount();
-			if(expenseMap.containsKey(id)){
+			if(expenseMap.containsKey(id)) {
 				Double temp=expenseMap.get(id);
 				amount=amount+temp;
-				expenseMap.put(id,amount);}
+				expenseMap.put(id, amount);
+			}
 			else {
-				expenseMap.put(id,amount);
+				expenseMap.put(id, amount);
 			}
 		}
 			List<CustomerExpense> custExpList=new ArrayList<>();
@@ -39,9 +38,9 @@ import com.infosys.expenseManagementApplication.dao.ExpenseDao;
 				CustomerExpense custExp=new CustomerExpense(cid,expenseMap.get(cid));
 				custExpList.add(custExp);
 			}
-				return custExpList;
-		}
+			return custExpList;
+			
 		
-		}
-
-
+		
+	}
+}
