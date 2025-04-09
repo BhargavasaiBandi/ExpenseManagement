@@ -1,3 +1,4 @@
+
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -52,14 +53,14 @@ function App() {
           <Route path="/update-category/:categoryId" element={<CategoryUpdate />} />
 
           {/* Expense Routes (Placeholder Pages) */}
-          <Route Path="/Expense-entry/:categoryid" element={<ExpenseEntry />} />
           <Route path="/Expense-entry" element={<ExpenseEntry />} />
           <Route path="/expenseListCust" element={<ExpenseListCustomer />} />
-          <Route path="/expense-update/:id" element={<ExpenseUpdate />} />
+          <Route path="/update-expense/:id" element={<ExpenseUpdate />} />
           <Route path="/CustExpenses/:customerId" element={<CustomerExpenses />} />
-          <Route path="/Expense-entry/:categoryId" element={<ExpenseEntry />} />
+          
           <Route path="/Expense-bar-chart" element={<ExpenseBarChart />} />
           <Route path="/admin-report" element={<AdminExpenseReport />} />
+          <Route path="/expense-entry/:categoryId?" element={<ExpenseEntry />} />
         </Routes>
       </BrowserRouter>
     </div>
