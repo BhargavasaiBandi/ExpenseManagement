@@ -15,13 +15,15 @@ import CustomerList from "./Components/CustomerComponent/CustomerList";
 import CustomerUpdate from "./Components/CustomerComponent/CustomerUpdate";
 import CustomerDetails from "./Components/CustomerComponent/CustomerDetails";
 import CustomerCurrent from "./Components/CustomerComponent/CustomerCurrent";
-import ExpenseEntry from "./Components/ExpenseComponent/ExpenseEntry";
+
 import ExpenseListCustomer from "./Components/ExpenseComponent/ExpenseList";
 import ExpenseUpdate from "./Components/ExpenseComponent/ExpenseUpdate";
 import CustomerExpenses from "./Components/ExpenseComponent/CustomerExpenses";
 
 import AdminExpenseReport from "./Components/ExpenseComponent/AdminExpenseReport";
 import ExpenseBarChart from "./Components/ExpenseComponent/ExpenseBarChart";
+
+import ExpenseEntry from "./Components/ExpenseComponent/ExpenseEntry";
 function App() {
   return (
     <div className="App">
@@ -61,6 +63,7 @@ function App() {
           <Route path="/Expense-bar-chart" element={<ExpenseBarChart />} />
           <Route path="/admin-report" element={<AdminExpenseReport />} />
           <Route path="/expense-entry/:categoryId?" element={<ExpenseEntry />} />
+         
         </Routes>
       </BrowserRouter>
     </div>
