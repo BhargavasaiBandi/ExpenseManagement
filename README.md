@@ -89,7 +89,7 @@ The **Expense Management System** is designed to help organizations and individu
 
 ## 👨‍💻 Author
 
-**Jigar Prajapati**
+**BHARGAVA SAI BANDI**
 
 ---
 
